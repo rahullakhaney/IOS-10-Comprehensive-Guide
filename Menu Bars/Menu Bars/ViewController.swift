@@ -9,17 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var timer = Timer()
 
     @IBAction func cameraButton(_ sender: AnyObject) {
         
-        print("Camera Pressed")
+        timer.invalidate()
     
     }
+    
+    func processTimer() {
+        
+        print("A Second has passed")
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var timer = Timer()
         
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.processTimer), userInfo: nil, repeats: true)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
