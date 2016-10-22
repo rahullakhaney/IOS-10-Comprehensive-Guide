@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Phone_Number_Appear" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQ5-Vh-TZk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2EQ-Hv-wCy"/>
+                                    <constraint firstAttribute="width" constant="343" id="WXv-zo-GZT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebb-fW-FPa">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="lnR-1V-hVk"/>
+                                    <constraint firstAttribute="width" constant="343" id="m6H-gQ-Co8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Phone Number Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjV-tw-ndC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UQI-Wf-IJK"/>
+                                    <constraint firstAttribute="width" constant="343" id="trI-I1-lrm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPw-BB-laA">
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ado-S3-AWP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pjV-tw-ndC" firstAttribute="top" secondItem="EQ5-Vh-TZk" secondAttribute="bottom" constant="45" id="Gvc-Uk-R2J"/>
+                            <constraint firstItem="Ebb-fW-FPa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="Oh7-kc-1TB"/>
+                            <constraint firstItem="Ebb-fW-FPa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aFf-Ky-w6H"/>
+                            <constraint firstItem="KPw-BB-laA" firstAttribute="top" secondItem="pjV-tw-ndC" secondAttribute="bottom" constant="24" id="e3k-x3-Whi"/>
+                            <constraint firstItem="KPw-BB-laA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eyQ-wC-dPv"/>
+                            <constraint firstItem="EQ5-Vh-TZk" firstAttribute="top" secondItem="Ebb-fW-FPa" secondAttribute="bottom" constant="16" id="jxx-xE-FlV"/>
+                            <constraint firstItem="EQ5-Vh-TZk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohL-jy-mIS"/>
+                            <constraint firstItem="pjV-tw-ndC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p5o-G1-qR3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="phoneInput" destination="EQ5-Vh-TZk" id="2Qg-jV-qHc"/>
+                        <outlet property="phoneLabel" destination="pjV-tw-ndC" id="8r8-FJ-dc3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
